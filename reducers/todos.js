@@ -2,13 +2,19 @@ import { ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, COMPLETE_ALL, CLEAR_CO
 
 const initialState = [
   {
-    text: 'Use Redux3',
+    text: 'Use Redux',
     completed: false,
     id: 0
+  },
+  {
+    text: 'Do Meetup in HK',
+    completed: false,
+    id: 1
   }
 ]
 
-export default function todos(state = initialState, action) {
+export default function todos(state = initialState, action = null) {
+
   switch (action.type) {
     case ADD_TODO:
       return [
